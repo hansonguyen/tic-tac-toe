@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Average+Sans&family=Noto+Sans:wght@700&family=Sarala&display=swap");
+body {
+  background-color: #262626;
+}
+body header {
+  color: #D3E0EE;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body header h1 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 4rem;
+}
+body header p {
+  font-family: "Average Sans", sans-serif;
+  font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  margin: 0 auto;
+  width: 60vmin;
+  height: 60vmin;
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+  background-color: #7EA3CC;
+  border: 8px solid #255C99;
+  border-radius: 10px;
+}
+
+.tile {
+  font-size: 6em;
+  font-weight: bold;
+  border: 8px solid #255C99;
+  background-color: #7EA3CC;
+  display: flex;
+  font-family: "Sarala", sans-serif;
+  color: #D3E0EE;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 2px;
+}/*# sourceMappingURL=styles.css.map */

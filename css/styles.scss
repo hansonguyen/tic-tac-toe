@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'mixins';
+@import 'tile';
+
+body {
+    background-color: $bg-color;
+    header {
+        color: $txt-color;
+        @include center;
+        h1 {
+            font-family: $heading-font;
+            font-size: 4rem;
+        }
+        p {
+            font-family: $subheading-font;
+            font-size: 2rem;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    margin: 0 auto;
+    width: 60vmin;
+    height: 60vmin;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    background-color: $grid-color;
+    border: $border-style;
+    @include border-radius(10px);
+}
+
+.tile {
+    font-size: 6em;
+    font-weight: bold;
+    border: $border-style;
+    background-color: $grid-color;
+    display: flex;
+    font-family: $text-font;
+    color: $txt-color;
+    @include center;
+    @include border-radius(2px);
+}
