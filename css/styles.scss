@@ -2,16 +2,25 @@
 @import 'mixins';
 @import 'tile';
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: $bg-color;
     header {
+        padding: 2vh;
         color: $txt-color;
         @include center;
         h1 {
+            padding: 1vh;
             font-family: $heading-font;
             font-size: 4rem;
         }
-        p {
+        h3 {
+            padding: 1vh;
             font-family: $subheading-font;
             font-size: 2rem;
         }
@@ -26,17 +35,24 @@ body {
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     background-color: $grid-color;
     border: $border-style;
-    @include border-radius(10px);
-}
-
-.tile {
-    font-size: 6em;
-    font-weight: bold;
-    border: $border-style;
-    background-color: $grid-color;
-    display: flex;
-    font-family: $text-font;
-    color: $txt-color;
-    @include center;
-    @include border-radius(2px);
+    @include border-radius(12px);
+    .tile {
+        border: $border-style;
+        background-color: $grid-color;
+        display: flex;
+        @include center;
+        &:hover, &:active {
+            &:not(.used) {
+                background-color: #b7d2f1;
+                transition: 0.3s;
+            }
+        }
+        p {
+            color: $txt-color;
+            font-weight: bold;
+            font-size: 3rem;
+            max-width: fit-content;
+            font-family: $text-font;
+        }
+    }
 }

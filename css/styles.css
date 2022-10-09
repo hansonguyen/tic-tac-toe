@@ -1,18 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Average+Sans&family=Noto+Sans:wght@700&family=Sarala&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #262626;
 }
 body header {
+  padding: 2vh;
   color: #D3E0EE;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 body header h1 {
+  padding: 1vh;
   font-family: "Noto Sans", sans-serif;
   font-size: 4rem;
 }
-body header p {
+body header h3 {
+  padding: 1vh;
   font-family: "Average Sans", sans-serif;
   font-size: 2rem;
 }
@@ -25,19 +34,26 @@ body header p {
   grid-template: repeat(3, 1fr)/repeat(3, 1fr);
   background-color: #7EA3CC;
   border: 8px solid #255C99;
-  border-radius: 10px;
+  border-radius: 12px;
 }
-
-.tile {
-  font-size: 6em;
-  font-weight: bold;
+.grid .tile {
   border: 8px solid #255C99;
   background-color: #7EA3CC;
   display: flex;
-  font-family: "Sarala", sans-serif;
-  color: #D3E0EE;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-radius: 2px;
+}
+.grid .tile:hover:not(.used), .grid .tile:active:not(.used) {
+  background-color: #b7d2f1;
+  transition: 0.3s;
+}
+.grid .tile p {
+  color: #D3E0EE;
+  font-weight: bold;
+  font-size: 3rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-family: "Sarala", sans-serif;
 }/*# sourceMappingURL=styles.css.map */
