@@ -10,8 +10,9 @@
 
 body {
     background-color: $bg-color;
+    overflow: hidden;
     header {
-        padding: 2vh;
+        padding: 1.5vh;
         color: $txt-color;
         @include center;
         h1 {
@@ -19,10 +20,16 @@ body {
             font-family: $heading-font;
             font-size: 4rem;
         }
-        h3 {
-            padding: 1vh;
+        a {
+            text-decoration: none;
+            color: $txt-color;
+            padding-bottom: 1vh;
             font-family: $subheading-font;
             font-size: 2rem;
+            &:hover {
+                color: rgb(149, 194, 209);
+                transition: 0.3s;
+            }
         }
     }
 }
@@ -43,7 +50,7 @@ body {
         @include center;
         &:hover, &:active {
             &:not(.used) {
-                background-color: #b7d2f1;
+                background-color: $hover-color;
                 transition: 0.3s;
             }
         }
@@ -55,5 +62,33 @@ body {
             font-family: $text-font;
             @include transition;
         }
+    }
+}
+.winnerText {
+    @include center;
+    font-size: 4rem;
+    font-family: $text-font;
+    color: $txt-color;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.reset {
+    display: flex;
+    margin: auto;
+    position: relative;
+    font-family: $text-font;
+    color: $txt-color;
+    background-color: $game-bg-color;
+    width: 17vmin;
+    height: 10vmin;
+    font-size: 2rem;
+    @include border-radius(12px);
+    @include center;
+    border: none;
+    visibility: hidden;
+    &:hover {
+        background-color: $hover-color2;
+        transition: 0.3s;
     }
 }

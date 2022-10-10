@@ -103,13 +103,22 @@ $(".tile").click(function() {
     winner1 = checkWin(board, true);
     winner2 = checkWin(board, false);
     if (winner1) {
-        $("h2").text("Player 1 wins!");
+        $(".winnerText").addClass("animate__bounceIn");
+        $(".winnerText").text("Player 1 wins!");
         $(".tile").addClass("used");
+        $(".reset").css("visibility", "visible")
+        $(".reset").addClass("animate__fadeIn animate__delay-1s");
     } else if (winner2) {
-        $("h2").text("Player 2 wins!");
+        $(".winnerText").addClass("animate__bounceIn");
+        $(".winnerText").text("Player 2 wins!");
         $(".tile").addClass("used");
+        $(".reset").css("visibility", "visible")
+        $(".reset").addClass("animate__fadeIn animate__delay-1s");
     } else if (round > 8) {
-        $("h2").text("Tie!");
+        $(".winnerText").addClass("animate__bounceIn");
+        $(".winnerText").text("Tie!");
+        $(".reset").css("visibility", "visible")
+        $(".reset").addClass("animate__fadeIn animate__delay-1s");
     }
 })
 
@@ -135,7 +144,10 @@ $(".reset").click(function() {
     $(".tile").removeClass("used");
     $(".letter").text("");
     $(".letter").removeClass("animate__bounceIn");
-    $("h2").text("");
+    $(".winnerText").removeClass("animate__bounceIn");
+    $(".winnerText").text("");
+    $(".reset").css("visibility", "hidden")
+    $(".reset").removeClass("animate__fadeIn animate__delay-1s");
     round = 0;
     board = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     p1Turn = true;

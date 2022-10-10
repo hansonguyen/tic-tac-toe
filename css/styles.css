@@ -7,9 +7,10 @@
 
 body {
   background-color: #262626;
+  overflow: hidden;
 }
 body header {
-  padding: 2vh;
+  padding: 1.5vh;
   color: #D3E0EE;
   align-items: center;
   justify-content: center;
@@ -20,10 +21,16 @@ body header h1 {
   font-family: "Noto Sans", sans-serif;
   font-size: 4rem;
 }
-body header h3 {
-  padding: 1vh;
+body header a {
+  text-decoration: none;
+  color: #D3E0EE;
+  padding-bottom: 1vh;
   font-family: "Average Sans", sans-serif;
   font-size: 2rem;
+}
+body header a:hover {
+  color: rgb(149, 194, 209);
+  transition: 0.3s;
 }
 
 .grid {
@@ -56,4 +63,38 @@ body header h3 {
   max-width: -moz-fit-content;
   max-width: fit-content;
   font-family: "Sarala", sans-serif;
+  transition: all 0.5s ease;
+}
+
+.winnerText {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Sarala", sans-serif;
+  color: #D3E0EE;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.reset {
+  display: flex;
+  margin: auto;
+  position: relative;
+  font-family: "Sarala", sans-serif;
+  color: #D3E0EE;
+  background-color: #255C99;
+  width: 17vmin;
+  height: 10vmin;
+  font-size: 2rem;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  visibility: hidden;
+}
+.reset:hover {
+  background-color: #3a6ca6;
+  transition: 0.3s;
 }/*# sourceMappingURL=styles.css.map */
